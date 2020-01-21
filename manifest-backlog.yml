@@ -7,6 +7,7 @@ applications:
   instances: 1
   env:
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{ enabled: false }'
   services:
   - tracker-backlog-database
   - tracker-service-registry
