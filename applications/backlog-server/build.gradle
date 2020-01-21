@@ -2,5 +2,5 @@ apply from: "$projectDir/../server.gradle"
 
 dependencies {
     compile project(":components:backlog")
-    compile "org.springframework.security:spring-security-config:$springSecurityVersion"
+//    compile "org.springframework.security:spring-security-config:$springSecurityVersion"
 }

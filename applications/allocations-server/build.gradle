@@ -2,5 +2,5 @@ apply from: "$projectDir/../server.gradle"
 
 dependencies {
     compile project(":components:allocations")
-    compile "org.springframework.security:spring-security-web:$springSecurityVersion"
+//    compile "org.springframework.security:spring-security-web:$springSecurityVersion"
 }
