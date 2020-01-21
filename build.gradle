@@ -2,8 +2,8 @@ import io.pivotal.pal.tracker.gradlebuild.DependenciesGraphPlugin
 
 buildscript {
     ext {
-        springCloudVersion = "Finchley.RELEASE"
-        springCloudServicesClientLibrariesVersion = "3.1.1.RELEASE"
+        springCloudVersion = "2.0.13-build.6"
+        springCloudServicesClientLibrariesVersion = "2.0.3.RELEASE"
         springBootVersion = "2.0.6.RELEASE"
         springVersion = "5.0.9.RELEASE"
         springSecurityVersion="5.2.1.RELEASE"
@@ -28,7 +28,7 @@ buildscript {
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
         classpath "mysql:mysql-connector-java:$mysqlVersion"
-        classpath "org.springframework.security:spring-security-config:5.2.1.RELEASE"
+        classpath "org.springframework.security:spring-security-config:$springSecurityVersion"
     }
 }
 
