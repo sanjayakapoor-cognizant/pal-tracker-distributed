@@ -17,6 +17,7 @@ buildscript {
         springCloudVersion = "Finchley.SR2"
         springCloudServicesClientLibrariesVersion = "2.0.2.RELEASE"
         springCloudCommonsVersion = "2.0.0.RELEASE"
+        springSecurityVersion="5.2.1.RELEASE"
 
     }
 
@@ -55,7 +56,7 @@ subprojects {
         testCompile "org.mockito:mockito-core:$mockitoVersion"
         testCompile "org.assertj:assertj-core:$assertJVersion"
     }
-    
+
     test.environment([
             "MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE": "*",
             "MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS": "always",
