@@ -55,7 +55,11 @@ subprojects {
         testCompile "org.mockito:mockito-core:$mockitoVersion"
         testCompile "org.assertj:assertj-core:$assertJVersion"
     }
-
+    
+    test.environment([
+            "MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE": "*",
+            "MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS": "always",
+    ])
     test {
         testLogging {
             exceptionFormat = 'full'
