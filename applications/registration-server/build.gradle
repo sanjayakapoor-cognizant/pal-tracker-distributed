@@ -4,5 +4,6 @@ dependencies {
     compile project(":components:accounts")
     compile project(":components:projects")
     compile project(":components:users")
-//    compile "org.springframework.security:spring-security-config:$springSecurityVersion"
+//    compile "com.netflix.hystrix:hystrix-javanica:1.5.18"
+//    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker"
 }
