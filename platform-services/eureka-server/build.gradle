@@ -14,4 +14,5 @@ dependencies {
     // for details about this dependency.
     compile "org.glassfish.jaxb:jaxb-runtime:2.3.1"
     compile "org.springframework.security:spring-security-config:$springSecurityVersion"
+    compile "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:$springSecurityOAuthAutoconfigVersion"
 }

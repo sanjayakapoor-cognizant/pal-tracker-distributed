@@ -6,6 +6,8 @@ applications:
   env:
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
     JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{ enabled: false }'
+    GRANT_TYPE: client_credentials
   services:
   - tracker-registration-database
   - tracker-service-registry
+  - tracker-sso
