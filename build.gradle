@@ -33,6 +33,7 @@ buildscript {
         classpath "mysql:mysql-connector-java:$mysqlVersion"
         classpath "org.springframework.security:spring-security-config:$springSecurityVersion"
         classpath "org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"
+
     }
 }
 
@@ -54,6 +55,10 @@ subprojects {
         compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
         compile "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
         compile "org.slf4j:slf4j-api:$slf4jVersion"
+        compile "org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"
+        compile "org.springframework.cloud:spring-cloud-starter-config:$springCloudServicesClientLibrariesVersion"
+        compile "org.springframework.cloud:spring-cloud-config-dependencies:$springCloudServicesClientLibrariesVersion"
+
 
         testCompile "junit:junit:$junitVersion"
         testCompile "org.mockito:mockito-core:$mockitoVersion"
