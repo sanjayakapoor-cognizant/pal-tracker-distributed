@@ -3,7 +3,7 @@ apply plugin: "io.spring.dependency-management"
 
 dependencyManagement {
     imports {
-        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Finchley.RELEASE"
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Finchley.SR2"
     }
 }
 
@@ -13,6 +13,4 @@ dependencies {
     // See https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-with-Java-9-and-above#jaxb
     // for details about this dependency.
     compile "org.glassfish.jaxb:jaxb-runtime:2.3.1"
-    compile "org.springframework.security:spring-security-config:$springSecurityVersion"
-    compile "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:$springSecurityOAuthAutoconfigVersion"
 }

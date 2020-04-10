@@ -2,9 +2,9 @@ import io.pivotal.pal.tracker.gradlebuild.DependenciesGraphPlugin
 
 buildscript {
     ext {
-        springBootVersion = "2.2.0.RELEASE"
+        springBootVersion = "2.0.6.RELEASE"
         springVersion = "5.0.9.RELEASE"
-        mysqlVersion ="8.0.19"
+        mysqlVersion = "8.0.19"
         jacksonVersion = "2.9.7"
         slf4jVersion = "1.7.25"
         mockitoVersion = "2.23.0"
@@ -14,26 +14,22 @@ buildscript {
         junitVersion = "4.12"
         okhttpVersion = "3.12.0"
         jsonPathVersion = "2.4.0"
-        springCloudVersion = "Greenwich.SR3"
-        springCloudServicesClientLibrariesVersion = "2.1.4.RELEASE"
-        springCloudCommonsVersion = "2.1.3.RELEASE"
-        springSecurityVersion="5.2.1.RELEASE"
-        springSecurityOAuthAutoconfigVersion = "2.2.0.RELEASE"
+        springCloudVersion = "Finchley.RELEASE"
+        springCloudServicesClientLibrariesVersion="2.0.3.RELEASE"
+        springSecurityOAuthAutoconfigVersion = "2.1.0.RELEASE"
         springCloudSsoVersion = "2.1.3.RELEASE"
-
     }
 
     repositories {
         mavenCentral()
         jcenter()
+
     }
 
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
         classpath "mysql:mysql-connector-java:$mysqlVersion"
-        classpath "org.springframework.security:spring-security-config:$springSecurityVersion"
-        classpath "org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"
-
+    
     }
 }
 
@@ -55,20 +51,16 @@ subprojects {
         compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
         compile "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
         compile "org.slf4j:slf4j-api:$slf4jVersion"
-        compile "org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"
-        compile "org.springframework.cloud:spring-cloud-starter-config:$springCloudServicesClientLibrariesVersion"
-        compile "org.springframework.cloud:spring-cloud-config-dependencies:$springCloudServicesClientLibrariesVersion"
 
+        compile "org.springframework.security:spring-security-core:5.2.1.RELEASE"
+        compile "org.springframework.security:spring-security-config:5.2.1.RELEASE"
+        compile "org.springframework.security:spring-security-web:5.2.1.RELEASE"
 
         testCompile "junit:junit:$junitVersion"
         testCompile "org.mockito:mockito-core:$mockitoVersion"
         testCompile "org.assertj:assertj-core:$assertJVersion"
     }
 
-    test.environment([
-            "MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE": "*",
-            "MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS": "always",
-    ])
     test {
         testLogging {
             exceptionFormat = 'full'

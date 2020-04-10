@@ -1,6 +1,5 @@
 dependencies {
     compile "org.springframework:spring-web:$springVersion"
     compile "org.springframework:spring-context:$springVersion"
-    compile "org.springframework.cloud:spring-cloud-commons:$springCloudCommonsVersion"
-    compile "com.netflix.hystrix:hystrix-javanica:1.5.18"
+    compile "org.springframework.cloud:spring-cloud-commons:2.0.0.RELEASE"
 }

@@ -4,11 +4,5 @@ dependencies {
     compile project(":components:accounts")
     compile project(":components:projects")
     compile project(":components:users")
-//    compile "org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"
-    compile "org.springframework.cloud:spring-cloud-starter-config:$springCloudServicesClientLibrariesVersion"
-//    compile "org.springframework.cloud:spring-cloud-config-dependencies:$springCloudServicesClientLibrariesVersion"
-    compile "org.springframework.cloud:spring-cloud-config-client:$springCloudServicesClientLibrariesVersion"
 
-//    compile "com.netflix.hystrix:hystrix-javanica:1.5.18"
-//    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker"
 }
