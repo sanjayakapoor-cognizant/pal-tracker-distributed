@@ -1,7 +1,7 @@
 dependencies {
     compile project(":components:rest-support")
     compile project(":components:users")
-    compile "org.springframework.boot:spring-boot-starter-jdbc:2.2.2.RELEASE"
+//    compile "org.springframework.boot:spring-boot-starter-jdbc:2.2.2.RELEASE"
 
     testCompile project(":components:test-support")
 }
